@@ -1,0 +1,31 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+
+<body>
+    <h1>Submit a Form</h1>
+    
+    <!-- تخبر المتصفح أن يرسل البيانات كـ "طرد مخفي" وليس في الرابط ظاهر -->
+    <!-- ..يسمح بإرسال صور , تقرير  POST لها طول محدد لكن URLs و للمساحة الروابط -->
+    <!-- للأمان ما حد يشوف الجواب يمكن كلمة مرور -->
+    <form method="post">
+        
+        <!-- (Name:) النص الذي يظهر بجانب الخانة -->
+        <label for="name">Name:</label>
+
+        <!-- request.form['name'] الذي سيستخدمه بايثون في سطر (Key) هذا المفتاح -->
+        <input type="text" id="name" name="name"> 
+        <input type="submit" value="Submit">
+        </form>
+</body>
+</html>
+
+
+
+

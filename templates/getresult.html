@@ -1,0 +1,83 @@
+<!-- مثل ورقة المعاملات في أي دائرة حكومية (Form) الهدف بناء استمارة -->
+
+<!DOCTYPE html>
+<html>  <!-- كل الكودات داخله htmlالجدار الخارجي للـ -->
+<head>  <!-- تعليمات للمتصفح عن كيفية تشغيل الصفحة -->
+
+<!-- وظيفتها هي إيجاد المسار الصحيح لأي ملف أو رابط url_for -->
+<!-- 'static' عندما تقول لـ فلاسك كلمة
+هنا ليست اسم المجلد على القرص الصلب، او اسم دالة
+بل هي "اسم الوظيفة" المحجوزة داخل نظام فلاسك
+مباشرة static/css/style.css قد تقول: "لماذا لا أكتب 
+url_for السبب: عندما ترفع موقعك على الإنترنت قد يتغير مكان المجلدات لو استخدمت 
+سيعرف فلاسك دائماً كيف يصل للملف 
+Heroku أو PythonAnywhere عندما ترفع موقعك على سيرفرات مثل 
+هذه السيرفرات أحياناً تعيد ترتيب الملفات أو تضعها في مسارات معقدة 
+تعمل كـ مترجم url_for -->
+<!-- للبناء الديناميكي للرابط url_for اما لما نستخدم 
+jinja.py نحن نربط "الرابط" بـ "دالة"، وليس بـ "ملف" مثال في ملف -->
+<!-- url_for التنسيق" بالصفحة لاحظ استخدام" CSSجلب "علبة الألوان" يربط ملف الـ -->
+<!-- "style.css" وابحث عن ملف اسمه "css" ثم مجلد "static" هذا يقول اذهب للمجلد -->
+<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+
+<!-- لتظهر رسالة تنبيه أو حركة عند ضغط زر JavaScript هذا المسؤول عن ربط -->
+<script type="text/javascript" src="{{url_for('static',filename='script/script.js')}}">
+</script>
+</head>
+
+<!-- هنا يبدأ كل شيء يراه المستخدم بعينه (نصوص، أزرار، خانات) -->
+<body>
+
+<h2>HTML Forms</h2>  <!-- عنوان كبير يظهر في أعلى الصفحة -->
+
+<!-- jinja.pyفي /submit11 يخبر المتصفح عند ضغط الزر خذ البيانات واذهب إلى -->
+<!-- مو فالرابط method="post": تعني أرسل البيانات في طرد مغلق -->
+<form action="/submit" method="post">
+
+    <!-- هذا مجرد نص مكتوب بجانب الخانة ليفتهم المستخدم ماذا يكتب هنا -->
+    <!-- <br> معناها سطر جديد -->
+    <label for="Science">Science:</label><br>
+
+    <!-- CSSالاسم الشخصي للخانة (يستخدمه المصمم لتغيير لونها) تحديداً بالـ id -->
+    <!-- name اسم الطرد (يستخدمه بايثون لاستلام البيانات) -->
+    <!-- رقم افتراظي value="0" -->
+    <input type="text" id="science" name="science" value="0"><br>
+
+    <label for="Maths">Maths:</label><br>
+    <input type="text" id="maths" name="maths" value="0"><br><br>
+    
+    <label for="C">C:</label><br>
+    <input type="text" id="c" name="c" value="0"><br><br>
+
+    <label for="datascience">Data Science:</label><br>
+    <input type="text" id="datascience" name="datascience" value="0"><br><br>
+
+    <!-- actionو ترسل لـvaluesوالـ namesهذا زر الإطلاق بالضغط عليه يتم جمع الـ -->
+    <input type="submit" value="Submit"><br><br>
+</form>
+
+<!-- (فقرة) Paragraphهي اختصار لـ <p> 
+    نص إرشادي" للمستخدم يخبره ماذا سيحدث عندما يضغط على الزر" -->
+<p>If you click the "Submit" button, the form-data will be sent to a page called "submit".</p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
