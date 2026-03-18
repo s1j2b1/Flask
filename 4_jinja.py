@@ -49,7 +49,7 @@ def submit():
         # sample.json حفظ البيانات في ملف 
         try:
             # نفتح الملف للقراءة أولاً لجلب البيانات القديمة (إذا أردت  )
-            with open(r'C:\Users\Lenovo\Desktop\Ai hasan\one\python\Big_Data\NET\Flask\3_flask\templates\sample.json', 'r') as f:
+            with open(r'C:\..', 'r') as f:
                 # قرأنا ما هو موجود حالياً في الملف (عشان ما نمسحه)
                 content = json.load(f)  
         
@@ -61,7 +61,7 @@ def submit():
         content.append(data_to_save)
 
         # الحفظ في الملف
-        with open(r'C:\Users\Lenovo\Desktop\Ai hasan\one\python\Big_Data\NET\Flask\3_flask\templates\sample.json', 'w') as f:
+        with open(r'C:\..\sample.json', 'w') as f:
             # indent تجعل الملف منسقاً وسهل القراءة
             json.dump(content, f, indent=4)
 
